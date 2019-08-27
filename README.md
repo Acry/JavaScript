@@ -87,11 +87,12 @@ See also:
 
 ## Electron Hello World
 
-- Using Chromium as Renderer Backend
+--Using Chromium as Renderer Backend.
 
 Not reinventing the wheel here too, there is a lot of boilerplate code in:
 
 <https://github.com/electron/electron-quick-start>
+
 
 Applications using Electron are structured:
 
@@ -118,7 +119,10 @@ function createWindow () {
 
 The function preloads a script to evaluate the version variables.
 
-Execute the code with `electron .`.
+If you have installed electron, like with:<br>
+`sudo npm install -g electron`
+
+You can execute the code with `electron .`.
 
 Postloading can be done in `index.html`
 
@@ -142,6 +146,9 @@ Paste the hello-world.js from https://developer.gnome.org/gnome-devel-demos/stab
 I don't like that you have to save files every time in contrast to PyCharm.
 Check `File/Auto Save` to fix that.
 
+### Keyboard
+
+Keyboard Shortcut: Ctrl+Shift+P
 The meta key for cursor movement is `ctrl` like in many other software projects, unlike `alt` in Bash's readline.
 
 Key bindings you may want to adjust:
@@ -156,4 +163,38 @@ editor.action.commentLine
 
 **Kill Line**
 editor.action.deleteLines
+
+**Multi Cursor**
+Alt + Click works.
+Ctrl + Click seperates single once - like in Windows Explorer.
+workbench.action.toggleMultiCursorModifier
+
+### Editor
+
+**Code Folding**
+Folding must be set (default)
+auto detection did not work for me, switched to indentation.
+I switched Show Folding Controls to always
+
+to force folding in this mode one can use:
+//region
+
+//endregion
+
+That is pretty common through IDE's.
+
+<https://code.visualstudio.com/docs/editor/codebasics#_folding>
+
+**Line wrap**
+editor.wordWrap
+
+**Zoom Code**
+editor.mouseWheelZoom
+
+
+## More on VSC
+
+https://code.visualstudio.com/docs
+
+Interactive playground on the welcome screen.
 
